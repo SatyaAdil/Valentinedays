@@ -441,11 +441,11 @@
     <!-- Password Page -->
     <div data-page="password" class="active">
         <div class="container">
-            <h2>Masukkan Password setelah waktunya habis</h2>
+            <h2>Selamat Datang Berliani Puspa Januar</h2>
             <img src="https://i.pinimg.com/474x/62/fd/10/62fd10e2736b141d2013babe08d45bff.jpg" alt="Gambar Dekoratif" style="width: 200px; margin-bottom: 15px;">
             <p id="countdown"></p>
             <input type="text" class="input-display" id="passwordDisplay" readonly>
-            <p class="hint" id="hint">Hint: our anniversary</p>
+            <p class="hint" id="hint">Gabungan Bulan Lahirku Dan Bulan Lahir kamu, 2 angka di belakangnya Tanggal lahir kita kalo ditambah jadi berapa sayang?... (0?0???)</p>
             <div id="heartsBg"></div>
             <div class="button-container">
                 <button class="num-button" onclick="addNumber(1)">1</button>
@@ -466,14 +466,14 @@
     <!-- Halaman Selanjutnya -->
     <div data-page="halaman_selanjutnya">
         <div class="content">
-            <h1>Happy Valentine's dayy Sayaaanggg</h1>
+            <h1>Happy Valentine's dayy Sayaaanggg, Maaf yahhh punya foto cantiknya kamu cuman ini doang, aku juga sering bingung kalo kangen apa yang mau diliat selain ini hehe...</h1>
             <div class="image-container">
-                <img src="foto/21.jpg" alt="Foto 1">
-                <img src="foto/22.jpg" alt="Foto 2">
-                <img src="foto/1.jpg" alt="Foto 3">
+                <img src="foto/1.jpeg" alt="Foto 1">
+                <img src="foto/21.jpeg" alt="Foto 2">
+                <img src="foto/22.jpeg" alt="Foto 3">
             </div>
             <button class="button" onclick="navigateToPage('hitung_pacaran')">
-                Mau liat udah seberapa lama kita pacaran ga?
+                Mau liat udah seberapa lama kita bareng-bareng ga?
             </button>
         </div>
     </div>
@@ -510,7 +510,7 @@
     </div>
     <!-- I Have Something Page -->
     <div data-page="i_have_something">
-        <h2>Surat untuk Mukti ❤️</h2>
+        <h2>Surat buat Pusapa ❤️</h2>
         <div class="container">
             <img src="./foto/icon_main-removebg-preview.png" alt="Amplop" class="envelope">
             <div class="letter" style="display: block;">
@@ -525,8 +525,8 @@
     <!-- Ayo Jalan Page -->
     <div data-page="ayo_jalan">
         <div class="container">
-            <h2>Tentuin tanggal berapa</h2>
-            <label for="day">Pilih Hari:</label>
+            <h2>Kamu Mau Kita kemana?</h2>
+            <label for="day">Note: Hari/tanggal opsional, kita bisa bahas bareng ya sayang, isi aja biar aku tau kamu mau kemana, Jangan lupa share pesanya yahh!</label>
             <select id="day">
                 <option value="Senin">Senin</option>
                 <option value="Selasa">Selasa</option>
@@ -653,11 +653,11 @@ function addNumber(num) {
     const passwordDisplay = document.getElementById('passwordDisplay');
     const submitButton = document.getElementById('submitButton');
     
-    if (passwordDisplay && passwordDisplay.value.length < 4) {
+    if (passwordDisplay && passwordDisplay.value.length < 6) {
         passwordDisplay.value += num;
         
-        // Enable submit button when password length is 4
-        if (passwordDisplay.value.length === 4) {
+        // Enable submit button when password length is 6
+        if (passwordDisplay.value.length === 6) {
             submitButton.disabled = false;
         }
     }
@@ -677,7 +677,7 @@ function checkPassword() {
     const passwordDisplay = document.getElementById('passwordDisplay');
     const hint = document.getElementById('hint');
     
-    if (passwordDisplay && passwordDisplay.value === '1010') {
+    if (passwordDisplay && passwordDisplay.value === '060127') {
         alert('Password benar! Klik OK untuk melanjutkan.');
         navigateToPage('halaman_selanjutnya');
     } else {
@@ -698,7 +698,7 @@ function initializeCountdown() {
         
         if (timeLeft <= 0) {
             if (countdownElement) {
-                countdownElement.innerHTML = 'Waktu habis! Anda dapat memasukkan password.';
+                countdownElement.innerHTML = 'Masukin Paswordnya Disini ya Sayang!.';
             }
             if (submitButton) {
                 submitButton.disabled = false;
@@ -722,9 +722,9 @@ function initializeCountdown() {
 
 // Read Me Page Functions
 const letters = [
-    "Sayaaang maaf yaa di valentine ini aku ga bisa ngasi apa apa selain web jelek ini. waktu kamu bilang bentar lagi hari valentine itu sebenarnya aku disitu langsung bingung mau ngasih apa. akhirnya setelah aku pikir pikir, aku mau bikinin kamu virtual gift aja.",
+    "Sayaaang maaf yaa di valentine ini aku ga bisa ngasi apa apa selain web jelek ini. setelah aku pikir pikir, aku mau bikinin kamu virtual gift aja.",
     "Maaf yaa kalo desain dari web ini kurang bagus, soalnya ini tu hasil explore explore sendiri dan belum terlalu mahir dalam bikinnya. maaf yaaa",
-    "Sebenernya aku sering boong tau waktu aku bilang aku ketiduran, sebenernya tu aku bikin ini, lanjut bikin ini. mungkin kamu udah tau si waktu kamu liat hp aku terus cek chattan aku sama ibu. tapi sekali lagi aku minta maaf yaa sayaang"
+    "Sebenernya aku sering ngerasa ga pantes lagi buat kamu, karena dengan keterbatasan dari banyak sudut pandang, sampai sekarang pun aku masih belum bisa kasih apa apa buat kamu, sekali lagi aku minta maaf yaa sayaang"
 ];
 
 function initializeReadMe() {
@@ -770,7 +770,7 @@ function typeLetterSequence(letterIndex) {
 
 // I Have Something Page Functions
 // Pesan Valentine yang akan ditampilkan
-const valentineMessage = "Happy Valentine's Day sayaaangg!!! 💖 Hari ini bukan cuma tentang cokelat atau bunga, tapi tentang kita tentang betapa beruntungnya aku bisa punya kamu di hidupku. Kamu itu seperti cahaya di hariku yang paling gelap, seperti lagu favorit yang nggak pernah bosan aku dengar.\n\nTerima kasih udah selalu ada, selalu sabar, dan selalu bikin aku merasa dihargai. Aku sayang kamu, lebih dari kata-kata yang bisa menggambarkan. Semoga hari ini penuh dengan kebahagiaan, seperti kamu yang selalu kasih kebahagiaan buat aku.\n\nHappy Valentine's, my love! 💖✨";
+const valentineMessage = "Happy Valentine's + Happy birthday sayaaangg!!! 💖 Hari ini bukan cuma tentang cokelat atau bunga, tapi tentang kita tentang betapa beruntungnya aku bisa punya kamu di hidupku. Kamu itu seperti cahaya di hariku yang paling gelap, seperti lagu favorit yang nggak pernah bosan aku dengar.\n\nTerima kasih udah selalu ada, selalu sabar, dan selalu bikin aku merasa dihargai. Aku sayang kamu, lebih dari kata-kata yang bisa menggambarkan. Semoga hari ini penuh dengan kebahagiaan, seperti kamu yang selalu kasih kebahagiaan buat aku.\n\nHappy Valentine's + Happy birthday, my love! 💖✨";
 
 let typingTimeout = null;
 
@@ -851,7 +851,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Counter Functions
 function updateCounter() {
-    const startDate = new Date('2024-10-10T23:00:00');
+    const startDate = new Date('2021-10-10T23:00:00');
     const counterElement = document.getElementById('counter');
     
     if (!counterElement) return;
@@ -906,7 +906,7 @@ function sendToWhatsApp() {
     if (!day) return;
     
     const message = `Di ${day} ini kita akan pergi ke ${selectedPlace}! 💕`;
-    const phoneNumber = '085725426737';
+    const phoneNumber = '+6282133979919';
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
 }
